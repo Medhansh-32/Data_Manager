@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>User Data</h1>
+   <style>
+
+    table ,td ,th{
+        border: 1px solid black;
+    }
+   </style>
+<div>
+
+    <form method="get" action="/user/new">
+        <Button type="submit" id="user"><div id="btn_size_text">Add User</div></Button>
+    </form>
+    <br>
+<table id="center_table">
+       
+        <tr>
+            <th>ID</th>
+            <th>User-Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    <% for(user of result){ %>
+        <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+            <form method="get" action="/user/<%=user.id%>/edit">
+                <td><button>Edit Username</button></td>
+            </form>
+
+    <form method="get" action="/user/<%=user.id%>/confirm">
+        <td><Button type="submit">Delete User</Button></td>
+    </form>
+        </tr>        
+    <% } %>
+    </table>
+   
+   
+
+</div>
+</body>
+</html>

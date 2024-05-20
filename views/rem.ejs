@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletion</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1> User : <%= result[0].email %></h1>
+    <h2>Delete <%= result[0].username %> ?</h3>
+        <form method="post" action="/user/<%= result[0].id %>/remove?_method=DELETE">
+    <label for="radio">Yes
+    <input type="radio" name="Del" value="Yes">
+</label>
+
+<label for="radio">No
+    <input type="radio" name="Del" value="No">
+</label>
+<br>
+<br>
+<br>
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>

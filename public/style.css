@@ -1,0 +1,38 @@
+body{
+    font-size: 1.5rem;
+    background-color: bisque;
+}
+button{
+    border: 0.2rem solid black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+h1{
+    text-align: center;
+}
+#center_table{
+margin-left: auto;
+margin-right: auto;
+}
+input{
+    border-radius: 1rem;
+    padding-left:1.5rem ;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#user{
+    height: 2rem;
+    width: 15rem;
+    color:white;
+    background-color: black;
+    padding-bottom: 1.8rem;
+   display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+#btn_size_text{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
